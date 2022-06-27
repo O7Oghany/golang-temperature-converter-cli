@@ -30,16 +30,17 @@ func main() {
 		if err != nil{
 			printError(errReadingInput)
 		}
+
 		if originUnit == "C"{
 			convertToFahrenheit(originValue)
-		}else{
+		} else {
 			convertToCelsius(originValue)
 		}
 
 		fmt.Print("Would you like to convert another temperature ? (y/n) ")
 		_, err = fmt.Scanln(&shouldConvertAgain)
 		if err != nil{
-			printError(err)
+			printError(errReadingInput)
 		}
 
 		 if strings.ToUpper(strings.TrimSpace(shouldConvertAgain)) != "Y" {
