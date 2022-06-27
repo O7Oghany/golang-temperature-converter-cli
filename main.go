@@ -26,7 +26,7 @@ func main() {
 
 	for {
 		fmt.Print("What is the current temperature in " + originUnit + " ? ")
-		_, err = fmt.Scanln(&originUnit)
+		_, err := fmt.Scanln(&originValue)
 		if err != nil{
 			printError(errReadingInput)
 		}
@@ -43,7 +43,7 @@ func main() {
 			printError(errReadingInput)
 		}
 
-		 if strings.ToUpper(strings.TrimSpace(shouldConvertAgain)) != "Y" {
+		if strings.ToUpper(strings.TrimSpace(shouldConvertAgain)) != "Y" {
 			fmt.Println("Good bye!")
 			break
 		}
